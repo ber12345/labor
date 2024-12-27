@@ -24,11 +24,37 @@
   --button-text: #000000;
 }
 
+
 [data-theme="dark"] {
   --background-color: #000000;
   --text-color: #ffffff;
   --button-bg: #444444;
   --button-text: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 20px;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
 }
 
 body {
@@ -56,7 +82,7 @@ button:hover {
 :root { 
   --background-color: #ccbdbd; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #300e09; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #d5d6a7; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #8a96a7; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #a08b8b; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */

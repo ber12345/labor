@@ -9,19 +9,7 @@
 (function() {
   "use strict";
 
-  function activateDarkBackground() {
-    const bodyElement = document.body; // Nurodo <body> elementą
-    bodyElement.classList.add('dark-background');
-}
 
-function toggleDarkMode() {
-  const rootElement = document.documentElement;
-  const currentTheme = rootElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  rootElement.setAttribute('data-theme', newTheme);
-}
-
-document.getElementById('dark-mode-button').addEventListener('click', toggleDarkMode);
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
@@ -35,6 +23,8 @@ document.getElementById('dark-mode-button').addEventListener('click', toggleDark
 
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
+
+  
 
   /**
    * Mobile nav toggle
@@ -196,5 +186,13 @@ document.getElementById('dark-mode-button').addEventListener('click', toggleDark
     });
 
   });
+
+  document.getElementById('themeToggle').addEventListener('click', function () {
+    const body = document.body;
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    body.setAttribute('data-theme', newTheme);
+});
+
 
 })();
